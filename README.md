@@ -1,11 +1,11 @@
-# 🇧🇩 Smart Hospital SMS.BD Module (Custom SMS Gateway)
+# Smart Hospital : Hospital Management System (SMS Module for Bangladesh)
 
 SMS.BD API integration module for **Smart Hospital Management System (CodeIgniter)**.
 
 🔗 Official Script:  
 👉 https://codecanyon.net/item/smart-hospital-hospital-management-system/23205038
 
-This module enables sending SMS notifications in Bangladesh using **SMS.BD Gateway (api.sms.net.bd)**.
+This module enables sending SMS notifications in Bangladesh using **SMS.BD Gateway**.
 
 ---
 
