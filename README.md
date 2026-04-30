@@ -13,8 +13,8 @@ This module replaces the default custom SMS library to enable native support for
 
 ### 1. API Credentials
 
-1. Register at **SMS.BD**
-2. Retrieve your **API KEY** from the Developer Portal
+1. Register at [**SMS.BD**](https://sms.bd/signup/)
+2. Retrieve your [**API KEY**](https://portal.sms.net.bd/api) from the Portal
 
 
 ### 2. File Replacement
@@ -22,10 +22,17 @@ This module replaces the default custom SMS library to enable native support for
 The Smart Hospital script uses a dedicated library for custom gateways.  
 You do **not** need to create new files.
 
-1. Open the file:application/libraries/Customsms.php
+1. Open the file:  
+   `application/libraries/Customsms.php`
 
 2. Replace the entire class content with the **SMS.BD integration code**
 
+3. Inside the class, make sure to add your credentials at the top:
+
+```php
+var $api_key = "YOUR_SMS_BD_API_KEY";
+var $sender_id = ""; // optional (add after getting approved sender ID from sms.bd)
+```
 
 ## Configuration
 
