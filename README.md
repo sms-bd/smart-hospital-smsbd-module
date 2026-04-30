@@ -1,91 +1,79 @@
-# Smart Hospital - SMS Module for Bangladesh
+# Smart Hospital SMS Gateway | SMS.BD Integration
 
-SMS.BD API integration module for **Smart Hospital Management System (CodeIgniter)**.
-
-🔗 Official Script:  
-👉 https://codecanyon.net/item/smart-hospital-hospital-management-system/23205038
-
-This module enables sending SMS notifications in Bangladesh using **SMS.BD Gateway**.
-
----
-
-## 🚀 Features
-
-- ✅ SMS.BD API Integration
-- ✅ Custom SMS Gateway Support
-- ✅ No extra plugin required
-- ✅ Lightweight & Easy Setup
-- ✅ Works with Smart Hospital Script
-- ✅ Supports Sender ID (optional)
-- ✅ Compatible with PHP 7 / PHP 8
-
----
-
-## 🇧🇩 বাংলাদেশি ব্যবহারকারীদের জন্য
-
-এই মডিউলটি **Smart Hospital Software** এর সাথে **SMS.BD API** ব্যবহার করে SMS পাঠানোর জন্য তৈরি করা হয়েছে।
-
-👉 Supported Use Cases:
-
-- Patient Appointment SMS  
-- Billing Notification  
-- Doctor Schedule Alert  
-- Lab Report Ready SMS  
-- OTP / Verification  
-
----
-
-## 🔧 Installation Guide
-
-### Step 1: Register SMS.BD Account
-
-👉 Signup: https://sms.bd/signup/  
-
-After registration:
-
-👉 Login: https://portal.sms.net.bd  
-👉 Go to **API Section**  
-👉 Copy your **API KEY**
-
----
-
-### Step 2: Install Module (Very Important)
-
-📌 Smart Hospital Script already includes this file: application/libraries/Customsms.php
+A lightweight, developer-friendly integration for the **Smart Hospital Management System**.  
+This module replaces the default custom SMS library to enable native support for the **SMS.BD API in Bangladesh**.
 
 
-👉 You **DO NOT need to create new file**
+## Technical Overview
 
-✅ Just:
+- **Target System:** [Smart Hospital - CodeCanyon v23205038](https://codecanyon.net/item/smart-hospital-hospital-management-system/23205038) 
+- **File Need to Change:** `application/libraries/Customsms.php`  
 
-- Open the file  
-- Replace existing code with this module code  
+## Installation
 
----
+### 1. API Credentials
 
-## ⚙️ Enable Custom SMS Gateway (IMPORTANT)
-
-After replacing the code, enable it from admin panel.
-
-### Steps:
-
-Go to:Dashboard → Setup → Settings → SMS Settings
+1. Register at **SMS.BD**
+2. Retrieve your **API KEY** from the Developer Portal
 
 
-Then configure:
+### 2. File Replacement
 
-- **Select:** Custom SMS Gateway  
-- **Gateway Name:** `Alpha SMS`  
-- **Status:** `Enabled`  
+The Smart Hospital script uses a dedicated library for custom gateways.  
+You do **not** need to create new files.
 
-Click **Save**
+1. Open the file:application/libraries/Customsms.php
 
----
+2. Replace the entire class content with the **SMS.BD integration code**
 
-## ✅ Usage Example (Developer)
 
-```php
-$this->load->library('customsms');
+## Configuration
 
-$this->customsms->sendSMS("8801XXXXXXXXX", "Test SMS from Smart Hospital");
+Activate the gateway via the Admin Panel:
+
+- **Path:** `Dashboard → Setup → Settings → SMS Settings`
+- **Gateway:** Select **Custom SMS Gateway**
+- **Name:** `Alpha SMS`
+- **Status:** **Enabled**
+
+Click **Save Changes**
+
+
+## Supported Events
+
+This module triggers notifications for the following core system events:
+
+### 🏥 Patient Care
+- Registration (OPD/IPD)
+- Discharge
+
+### 📅 Scheduling
+- Appointment Approvals
+
+### 🔐 Security
+- Login Credential Delivery
+
+### 💻 Telehealth
+- Live Meetings
+- Consultations
+
+
+## 🇧🇩 Bangladesh Specific Features
+
+- Supports **Masking/Branded/Sender ID** and **Non-Masking/Regular**
+- Optimized for high delivery rates across all local operators:
+- Grameenphone (GP)
+- Robi
+- Banglalink (BL)
+- Teletalk
+- Supports:
+- English messages
+- Unicode (Bangla) messages
+
+
+## Notes
+
+- Ensure your SMS.BD account is active before integration
+- Verify sender ID approval for masking/branded SMS (Optional)
+- Test with both English and Bangla messages after setup
 
