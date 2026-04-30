@@ -1,4 +1,4 @@
-# Smart Hospital : Hospital Management System (SMS Module for Bangladesh)
+# Smart Hospital - SMS Module for Bangladesh
 
 SMS.BD API integration module for **Smart Hospital Management System (CodeIgniter)**.
 
