@@ -22,11 +22,8 @@ This module replaces the default custom SMS library to enable native support for
 The Smart Hospital script uses a dedicated library for custom gateways.  
 You do **not** need to create new files.
 
-1. Open the file:  
-   `application/libraries/Customsms.php`
-
+1. Open the file: `application/libraries/Customsms.php`
 2. Replace the entire class content with the **SMS.BD integration code**
-
 3. Inside the class, make sure to add your credentials at the top:
 
 ```php
