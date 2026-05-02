@@ -1,4 +1,4 @@
-# Smart Hospital SMS Gateway | SMS.BD Integration
+# Smart Hospital SMS Module for Bangladesh Users
 
 A lightweight, developer-friendly integration for the **Smart Hospital Management System**.  
 This module replaces the default custom SMS library to enable native support for the **SMS.BD API in Bangladesh**.
